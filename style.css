@@ -1,3 +1,8 @@
+.cookie{
+  transition 0.2s;
+}
+
 .cookie:hover {
   width: 120%;
+  transition: 0.2s;
 }
