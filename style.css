@@ -13,15 +13,6 @@ h1, h2, h3, h4, h5, p, a {
     color: white;
 }
 
-.cookie{
-  transition 0.2s;
-}
-
-.cookie:hover {
-  width: 120%;
-  transition: 0.2s;
-}
-
 .button {
     text-decoration: none;
     border-radius: 15px;
