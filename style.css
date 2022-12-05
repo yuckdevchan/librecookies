@@ -1,3 +1,8 @@
+@font-face {
+    font-family: reemkufi;
+    src: url(ReemKufi.ttf);
+}
+
 .cookie{
   transition 0.2s;
 }
