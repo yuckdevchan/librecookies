@@ -6,3 +6,15 @@
   width: 120%;
   transition: 0.2s;
 }
+
+.button {
+    border-radius: 15px;
+    border-color: darkslategray;
+    background-color: ghostwhite;
+    width: 250px;
+    height: 100px;
+    font-size: 25px;
+    font-family: reemkufi;
+    transition: 0.3s;
+    color: black;
+}
