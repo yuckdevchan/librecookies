@@ -7,7 +7,7 @@
   <center>
     <h1>Libre Cookies</h1>
     <img src="images/cookie.PNG" class="cookie" alt="Cookie Image..." onclick="bakecookie()">
-    <p>You have <p id="count"></p> cookies</p>
+    <p id="count">You Have 0 Cookies</p>
     <a class="button" href="https://github.com/yuckdevchan/librecookies" target="_blank">Source Code on GitHub</a>
   </center>
   <script>
@@ -15,6 +15,6 @@
     var cpc = 1;
     function bakecookie() {
       cookies += cpc
-      document.getElementById("count").innerHTML = cookies
+      document.getElementById("count").innerHTML = "You have " + cookies + " Cookies"
    </script>
 </body>
