@@ -3,6 +3,10 @@
     src: url(ReemKufi.ttf);
 }
 
+body {
+    background-color: black;
+}
+
 .cookie{
   transition 0.2s;
 }
