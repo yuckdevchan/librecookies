@@ -8,6 +8,7 @@
 }
 
 .button {
+    text-decoration: none;
     border-radius: 15px;
     border-color: darkslategray;
     background-color: ghostwhite;
