@@ -3,11 +3,18 @@
   <link rel="stylesheet" href="style.css"
 </head>
 
+<script>
+  document.getElementById('count').innerHTML = 0
+  cookieclick() {
+    document.getElementById('output').innerHTML = document.getElementById('output').innerHTML + 1
+  }
+</script>
+  
 <body>
   <center>
     <h1>Libre Cookies</h1>
     <img src="images/cookie.PNG" class="cookie" alt="Cookie Image..." onclick="cookieclick()">
-    <p>You have x cookies</p>
+    <p>You have <p id="count"></p> cookies</p>
     <a class="button" href="https://github.com/yuckdevchan/librecookies" target="_blank">Source Code on GitHub</a>
   </center>
 </body>
