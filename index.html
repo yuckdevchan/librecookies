@@ -20,9 +20,11 @@
     var autoclicks = 0;
     var grandmas = 0;
     var cookies = 0;
+    var cookieso = 0;
     var cpc = 1;
     function bakecookie() {
       cookies += cpc
+      cookieso += cpc
       document.getElementById("count").innerHTML = "Cookies = " + cookies
     }
     
@@ -46,13 +48,14 @@
         document.getElementById("count").innerHTML = "Cookies = " + cookies
         grandmas = grandmas + 1
         document.getElementById("grandmacount").innerHTML = "Grandmas = " + grandmas
-        document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks
+        document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso / 2
       }
      }
     
     while (autoclicks > 0) {
       setTimeout(1000)
       cookies = cookies + parseInt(autoclicks)
+      cookieso = cookieso + parseInt(autoclicks)
       document.getElementById("count").innerHTML = "Cookies = " + cookies
     }
     
@@ -77,6 +80,7 @@
     document.addEventListener('keyup', event => {
       if (event.code === 'BracketRight') {
         cookies = cookies + 123456789123456
+        cookieso = cookieso + 12345678912345
         document.getElementById("count").innerHTML = "Cookies = " + cookies
       }
     })
