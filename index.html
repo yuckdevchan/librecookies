@@ -47,8 +47,9 @@
      }
     
     while (autoclicks > 0) {
-           cookies = cookies + 10
-           document.getElementById("count").innerHTML = "Cookies = " + cookies
+      setTimeout(1000)
+      cookies = cookies + parseInt(autoclicks)
+      document.getElementById("count").innerHTML = "Cookies = " + cookies
     }
     
     document.addEventListener('keyup', event => {
