@@ -24,9 +24,9 @@
     function autoclick() {
       if (cookies > 9) {
         cookies = cookies - 10
+        document.getElementById("count").innerHTML = "Cookies = " + cookies
         var autoclicks = autoclicks + 1;
         document.getElementById("autoclickcount").innerHTML = "Autoclickers = " + autoclicks
-        document.getElementById("count").innerHTML = "Cookies = " + cookies
       }
     }
    </script>
