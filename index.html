@@ -50,5 +50,11 @@
            cookies = cookies + 10
            document.getElementById("count").innerHTML = "Cookies = " + cookies
     }
+    
+    document.addEventListener('keyup', event => {
+      if (event.code === 'Space') {
+        bakecookie()
+      }
+    }
    </script>
 </body>
