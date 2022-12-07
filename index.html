@@ -22,10 +22,13 @@
     var cookies = 0;
     var cookieso = 0;
     var cpc = 1;
+    
     function bakecookie() {
       cookies += cpc
       cookieso += cpc
       document.getElementById("count").innerHTML = "Cookies = " + cookies
+      
+      document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso / 2
     }
     
     function autoclick() {
@@ -39,6 +42,8 @@
         document.getElementById("autoclickcount").style.fontSize = "x-large";
         setTimeout(500)
         document.getElementById("autoclickcount").style.fontSize = "initial";
+        
+        document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso / 2
       }
     }
       
