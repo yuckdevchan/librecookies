@@ -10,11 +10,14 @@
     <p id="count">Cookies = 0</p>
     <p id="autoclickcount">Autoclickers = 0</p>
     <p id="grandmacount">Grandmas = 0</p>
-    <a class="button upgrade1" onclick="autoclick()">Buy Autoclicker (10 Cookies)
+    <a class="button autoclickupgrade" onclick="autoclick()">Buy Autoclicker (10 Cookies)
+    <a class="button" onclick="grandma()">Buy Grandma (50 Cookies)</a>
+    <br>
     <a class="button" href="https://github.com/yuckdevchan/librecookies" target="_blank">Source Code on GitHub</a>
   </center>
   <script>
     var autoclicks = 0;
+    var grandmas = 0;
     var cookies = 0;
     var cpc = 1;
     function bakecookie() {
@@ -28,6 +31,14 @@
         document.getElementById("count").innerHTML = "Cookies = " + cookies
         autoclicks = autoclicks + 1;
         document.getElementById("autoclickcount").innerHTML = "Autoclickers = " + autoclicks
+      }
+      
+    function grandma() {
+      if (cookies > 49) {
+        cookies = cookies - 50
+        document.getElementById("count").innerHTML = "Cookies = " + cookies
+        grandmas = grandmas + 1
+        document.getElementById("grandmacount").innerHTML = "Grandmas = " + grandmas
       }
     }
    </script>
