@@ -8,14 +8,24 @@
     <h1>Libre Cookies</h1>
     <img src="images/cookie.PNG" class="cookie" alt="Cookie Image..." onclick="bakecookie()">
     <p id="count">You Have 0 Cookies</p>
+    <a class="button upgrade1" onclick="autoclick()">Buy Autoclicker (10 Cookies)
     <a class="button" href="https://github.com/yuckdevchan/librecookies" target="_blank">Source Code on GitHub</a>
   </center>
   <script>
+    var autoclicks = 0;
     var cookies = 0;
     var cpc = 1;
     function bakecookie() {
       cookies += cpc
-      document.getElementById("count").innerHTML = "You have " + cookies + " Cookies"
+      document.getElementById("count").innerHTML = "Cookies = " + cookies
+    }
+    
+    function autoclick() {
+      if (cookies > 9) {
+        cookies = cookies - 10
+        var autoclicks = autoclicks + 1;
+        document.getElementById("autoclickcount").innerHTML = "Autoclickers = " + autoclicks
+      }
     }
    </script>
 </body>
