@@ -68,5 +68,12 @@
         grandma()
       }
     })
+    
+    document.addEventListener('keyup', event => {
+      if (event.code === 'BracketRight') {
+        cookies = cookies + 100000000000000
+        document.getElementById("count").innerHTML = "Cookies = " + cookies
+      }
+    })
    </script>
 </body>
