@@ -14,6 +14,7 @@
       <a class="button autoclickupgrade" onclick="autoclick()">Buy Autoclicker (10 Cookies)
       <a class="button" onclick="grandma()">Buy Grandma (50 Cookies)</a>
       <br>
+      <a class="button" onclick="bakeryname()">Change Bakery Name</a>
       <a class="button" href="https://github.com/yuckdevchan/librecookies" target="_blank">Source Code on GitHub</a>
     </center>
     <script>
@@ -93,6 +94,10 @@
           document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
         }
       })
+        
+      function bakeryname() {
+          let bakery = prompt("What would you like to name your bakery?")
+      }
      </script>
   </body>
   
