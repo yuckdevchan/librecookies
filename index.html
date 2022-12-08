@@ -1,96 +1,98 @@
 <head>
-  <title>Libre Cookies</title>
-  <link rel="stylesheet" href="style.css"
-</head>
+    <title>Libre Cookies</title>
+    <link rel="stylesheet" href="style.css"
+  </head>
+    
+  <body>
+    <center>
+      <h1>Libre Cookies</h1>
+      <img src="images/cookie.PNG" class="cookie" alt="Cookie Image..." onclick="bakecookie()">
+      <p id="count">Cookies = 0</p>
+      <p id="autoclickcount">Autoclickers = 0</p>
+      <p id="scorecount">Score = 0</p>
+      <p id="grandmacount">Grandmas = 0</p>
+      <a class="button autoclickupgrade" onclick="autoclick()">Buy Autoclicker (10 Cookies)
+      <a class="button" onclick="grandma()">Buy Grandma (50 Cookies)</a>
+      <br>
+      <a class="button" href="https://github.com/yuckdevchan/librecookies" target="_blank">Source Code on GitHub</a>
+    </center>
+    <script>
+      var autoclicks = 0;
+      var grandmas = 0;
+      var cookies = 0;
+      var cookieso = 0;
+      var cpc = 1;
+      
+      function bakecookie() {
+        cookies += cpc
+        cookieso += cpc
+        document.getElementById("count").innerHTML = "Cookies = " + cookies
+        
+        document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
+      }
+      
+      function autoclick() {
+        if (cookies > 9) {
+          cookies = cookies - 10
+          document.getElementById("count").innerHTML = "Cookies = " + cookies
+          autoclicks = autoclicks + 1;
+          document.getElementById("autoclickcount").innerHTML = "Autoclickers = " + autoclicks
+          
+          document.getElementById("autoclickcount").style.transitionDuration = "0.5s";
+          document.getElementById("autoclickcount").style.fontSize = "x-large";
+          setTimeout(500)
+          document.getElementById("autoclickcount").style.fontSize = "initial";
+          
+          document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
+        }
+      }
+        
+      function grandma() {
+        if (cookies > 49) {
+          cookies = cookies - 50
+          document.getElementById("count").innerHTML = "Cookies = " + cookies
+          grandmas = grandmas + 1
+          cpc = grandmas + 1
+          document.getElementById("grandmacount").innerHTML = "Grandmas = " + grandmas
+          
+          document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
+        }
+       }
+      
+      while (autoclicks > 0) {
+        setTimeout(1000)
+        cookies = cookies + parseInt(autoclicks)
+        cookieso = cookieso + parseInt(autoclicks)
+        document.getElementById("count").innerHTML = "Cookies = " + cookies
+      }
+      
+      document.addEventListener('keyup', event => {
+        if (event.code === 'Space') {
+          bakecookie()
+        }
+      })
+      
+      document.addEventListener('keyup', event => {
+        if (event.code === 'Digit1') {
+          autoclick()
+        }
+      })
+      
+      document.addEventListener('keyup', event => {
+        if (event.code === 'Digit2') {
+          grandma()
+        }
+      })
+      
+      document.addEventListener('keyup', event => {
+        if (event.code === 'BracketRight') {
+          cookies = cookies + 123456789123456
+          cookieso = cookieso + 12345678912345
+          document.getElementById("count").innerHTML = "Cookies = " + cookies
+          
+          document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
+        }
+      })
+     </script>
+  </body>
   
-<body>
-  <center>
-    <h1>Libre Cookies</h1>
-    <img src="images/cookie.PNG" class="cookie" alt="Cookie Image..." onclick="bakecookie()">
-    <p id="count">Cookies = 0</p>
-    <p id="autoclickcount">Autoclickers = 0</p>
-    <p id="scorecount">Score = 0</p>
-    <p id="grandmacount">Grandmas = 0</p>
-    <a class="button autoclickupgrade" onclick="autoclick()">Buy Autoclicker (10 Cookies)
-    <a class="button" onclick="grandma()">Buy Grandma (50 Cookies)</a>
-    <br>
-    <a class="button" href="https://github.com/yuckdevchan/librecookies" target="_blank">Source Code on GitHub</a>
-  </center>
-  <script>
-    var autoclicks = 0;
-    var grandmas = 0;
-    var cookies = 0;
-    var cookieso = 0;
-    var cpc = 1;
-    
-    function bakecookie() {
-      cookies += cpc
-      cookieso += cpc
-      document.getElementById("count").innerHTML = "Cookies = " + cookies
-      
-      document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
-    }
-    
-    function autoclick() {
-      if (cookies > 9) {
-        cookies = cookies - 10
-        document.getElementById("count").innerHTML = "Cookies = " + cookies
-        autoclicks = autoclicks + 1;
-        document.getElementById("autoclickcount").innerHTML = "Autoclickers = " + autoclicks
-        
-        document.getElementById("autoclickcount").style.transitionDuration = "0.5s";
-        document.getElementById("autoclickcount").style.fontSize = "x-large";
-        setTimeout(500)
-        document.getElementById("autoclickcount").style.fontSize = "initial";
-        
-        document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
-      }
-    }
-      
-    function grandma() {
-      if (cookies > 49) {
-        cookies = cookies - 50
-        document.getElementById("count").innerHTML = "Cookies = " + cookies
-        grandmas = grandmas + 1
-        document.getElementById("grandmacount").innerHTML = "Grandmas = " + grandmas
-        
-        document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
-      }
-     }
-    
-    while (autoclicks > 0) {
-      setTimeout(1000)
-      cookies = cookies + parseInt(autoclicks)
-      cookieso = cookieso + parseInt(autoclicks)
-      document.getElementById("count").innerHTML = "Cookies = " + cookies
-    }
-    
-    document.addEventListener('keyup', event => {
-      if (event.code === 'Space') {
-        bakecookie()
-      }
-    })
-    
-    document.addEventListener('keyup', event => {
-      if (event.code === 'Digit1') {
-        autoclick()
-      }
-    })
-    
-    document.addEventListener('keyup', event => {
-      if (event.code === 'Digit2') {
-        grandma()
-      }
-    })
-    
-    document.addEventListener('keyup', event => {
-      if (event.code === 'BracketRight') {
-        cookies = cookies + 123456789123456
-        cookieso = cookieso + 12345678912345
-        document.getElementById("count").innerHTML = "Cookies = " + cookies
-        
-        document.getElementById("scorecount").innerHTML = "Score = " + grandmas * autoclicks + cookieso * 20
-      }
-    })
-   </script>
-</body>
