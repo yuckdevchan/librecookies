@@ -6,6 +6,7 @@
   <body>
     <center>
       <h1>Libre Cookies</h1>
+      <h2 id="bakerylabel">Libre Bakery</h2>
       <img src="images/cookie.PNG" class="cookie" alt="Cookie Image..." onclick="bakecookie()">
       <p id="count">Cookies = 0</p>
       <p id="autoclickcount">Autoclickers = 0</p>
@@ -97,6 +98,7 @@
         
       function bakeryname() {
           let bakery = prompt("What would you like to name your bakery?")
+          document.getElementById("bakerylabel").innerHTML = bakery
       }
      </script>
   </body>
