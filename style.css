@@ -23,3 +23,14 @@ h1, h2, h3, h4, h5, p, a {
     transition: 0.3s;
     color: black;
 }
+
+.bakerylabel {
+    text-decoration: none;
+    border-radius: 15px;
+    border-color: white;
+    background-color: black;
+    font-size: 25px;
+    font-family: reemkufi;
+    transition: 0.3s;
+    color: white;
+}
